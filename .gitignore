@@ -1,0 +1,14 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!CMakeLists.txt
+!CMakeListsNotGPU.txt
+!src/main.cpp
+!src/mainOnGpu.cpp
+!src/main.py
+!src/temp.cpp
+
+# Explicitly ignore the build directory
+/build/
