@@ -42,7 +42,8 @@ int voxelProcessOpen3D(std::string pcdFileName, std::string newFileNamePrefix) {
     //std::string voxelPcdFileName = "filtered_" + std::to_string(voxel_grid->points_.size()) + ".pcd";
     //open3d::io::WritePointCloud(voxelPcdFileName, *voxel_grid, true);
     //std::cout << "Saved " << voxel_grid->points_.size() << " data points to " << voxelPcdFileName << std::endl;
-    std::string filePath = "/home/kenji/workspace/resarch/pcdFile/aviaExportData/";
+    //std::string filePath = "/home/kenji/workspace/resarch/pcdFile/aviaExportData/";
+    std::string filePath = "/home/kenji/workspace/pcdFile/aviaExportData/";
     std::string voxelPcdFileName = filePath + "filtered_" + newFileNamePrefix + "_" + std::to_string(voxel_size) + "_" + std::to_string(voxel_grid.GetPointPositions().GetLength()) + ".pcd";
     //open3d::io::WritePointCloudToPCD(voxelPcdFileName, voxel_grid.ToLegacy(), true);
     std::cout << "Saved " << voxel_grid.GetPointPositions().GetLength() << " data points to " << voxelPcdFileName << std::endl;
@@ -95,7 +96,9 @@ std::string extractNewFileName(const std::string& originalFileName) {
 
 int main(void) {
     // Pcd File Directory Path
-    std::string pcdDirectoryPath = "/home/kenji/workspace/resarch/pcdFile/originalData";
+    //std::string pcdDirectoryPath = "/home/kenji/workspace/resarch/pcdFile/originalData";
+    std::string pcdDirectoryPath = "/home/kenji/workspace/pcdFile/originalData";
+
     // Get Pcd Files
     auto pcdFiles = getFilesInDirectory(pcdDirectoryPath);
 

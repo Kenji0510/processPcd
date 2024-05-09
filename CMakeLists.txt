@@ -8,10 +8,15 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 # CUDA support
 find_package(CUDA REQUIRED)
 enable_language(CUDA)
+# Below For jetson orin nano 
+find_package(CUDAToolkit REQUIRED)
 
 # Find Open3D with GPU support
 # Set the path to the Open3D library with GPU support
-set(Open3D_DIR "/usr/local/include/open3d_cuda/lib/cmake/Open3D")
+# For my home GPU server
+#set(Open3D_DIR "/usr/local/include/open3d_cuda/lib/cmake/Open3D")
+# For jetson orin nano
+set(Open3D_DIR "/home/kenji/open3d_install/lib/cmake/Open3D")
 find_package(Open3D REQUIRED)
 find_package(Boost REQUIRED COMPONENTS system filesystem)
 
