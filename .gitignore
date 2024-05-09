@@ -5,6 +5,11 @@
 !.gitignore
 !CMakeLists.txt
 !CMakeListsNotGPU.txt
+
+# Include src directory itself
+!src/
+
+# Include specific files in src
 !src/main.cpp
 !src/mainOnGpu.cpp
 !src/main.py
